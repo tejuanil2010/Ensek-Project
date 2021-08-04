@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="resources.Listeners"/>
+  </listeners>
+  <test parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="Screening.Ensek.BuyElectricityTest">
+        <methods>
+          <include name="buyEnergyTest" invocation-numbers="1 2 3"/>
+          <include name="browserClose"/>
+          <include name="initialize"/>
+        </methods>
+      </class> <!-- Screening.Ensek.BuyElectricityTest -->
+      <class name="Screening.Ensek.BuyOilTest">
+        <methods>
+          <include name="browserClose"/>
+          <include name="initialize"/>
+          <include name="buyEnergyTest" invocation-numbers="0 2 3"/>
+        </methods>
+      </class> <!-- Screening.Ensek.BuyOilTest -->
+      <class name="Screening.Ensek.BuyGasTest">
+        <methods>
+          <include name="initialize"/>
+          <include name="browserClose"/>
+          <include name="buyEnergyTest" invocation-numbers="1 2 3"/>
+        </methods>
+      </class> <!-- Screening.Ensek.BuyGasTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
